@@ -151,23 +151,9 @@ class MobiusStrip:
 
 # Example Usage
 if __name__ == "__main__":
-    R_val = 10
-    w_val = 3
-    n_val = 100
-
-    mobius = MobiusStrip(R_val, w_val, n_val)
-
-    # Get mesh points
-    x_mesh, y_mesh, z_mesh = mobius.mesh_points
-    print(f"Mesh points shape: x={x_mesh.shape}, y={y_mesh.shape}, z={z_mesh.shape}")
-
-    # Compute and print surface area
+    mobius = MobiusStrip(R=1.0, w=0.4, n=300)
     area = mobius.surface_area
     print(f"Approximated Surface Area: {area:.4f}")
-
-    # Compute and print edge length
     length = mobius.edge_length
     print(f"Approximated Edge Length: {length:.4f}")
-
-    # Plot the Mobius strip
     mobius.plot_strip()
